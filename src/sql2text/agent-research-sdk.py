@@ -11,16 +11,6 @@ import deepl
 from agents import Agent, ItemHelpers, Runner, function_tool
 from linkup import LinkupClient
 
-# ------------------------------
-# Tool Definitions
-# ------------------------------
-
-# client = AsyncOpenAI(
-#     base_url="https://llm-gateway.truefoundry.com",
-#     api_key="eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6ImpGeDlsckxieU54X3BSWjFrYnJOV1JsODVSOCJ9.eyJhdWQiOiI2ZjY0NzM2My0yZDY0LTY1NmQtNmYzYS0zOTMwMzkzMzMwNjEiLCJleHAiOjM3MTkxNDE4MzAsImlhdCI6MTc1OTU4OTgzMCwiaXNzIjoidHJ1ZWZvdW5kcnkuY29tIiwic3ViIjoiY21nY2VjcW11NHRjejAxcWZmeGRlYjVpOSIsImp0aSI6ImNmOTgwZTA5LTZmODEtNGFhZS04NDNjLWI3MTExNTVjMTllNiIsInN1YmplY3RTbHVnIjoiZGVmYXVsdC1jbWdjZWNpeG40ZzluMDFvemY5MXJidmNuIiwidXNlcm5hbWUiOiJkZWZhdWx0LWNtZ2NlY2l4bjRnOW4wMW96ZjkxcmJ2Y24iLCJ1c2VyVHlwZSI6InNlcnZpY2VhY2NvdW50Iiwic3ViamVjdFR5cGUiOiJzZXJ2aWNlYWNjb3VudCIsInRlbmFudE5hbWUiOiJvZHNjLWRlbW8iLCJyb2xlcyI6W10sImFwcGxpY2F0aW9uSWQiOiI2ZjY0NzM2My0yZDY0LTY1NmQtNmYzYS0zOTMwMzkzMzMwNjEifQ.sq86_DE_Vf9axpDex0ZlN-OmHF5dzIQSpDZ2AtTvgyjbLPY0ec5QFFWbr7cmFfo3O88AHeUN5mvRY1VIpIriDdShDKLaA4VmA3_OLrLCAjpeROWvyFuXv-1AIhBQU05DSTijNPAEGSu1ztjxXIAHhVbBZwfk2y-mFrZXxZ6iaMC9h6l7nq9-eHqIgfncSUtDLB7ffqo0qVfXh8_heYzm6_Rf8qSkhG_mLEXAcez0C86AFSvzh5FU6mshg6TKLfLEy6kaE_h--pOxdGcp2kJm70zH0e5Cnuiu0Z-toQfM-mNZCAbTVfw9K26ye-bqFeQCUgpmfsMygjuEJMycFHyrMA",
-# )
-# set_default_openai_client(client=client, use_for_tracing=False)
-
 
 @function_tool
 def search_web(
@@ -607,7 +597,7 @@ def main() -> None:
 
     agent = Agent(
         name="Research Assistant (Chat)",
-        model="gpt-5-mini",
+        model="gpt-4o-mini",
         tools=[
             search_web,
             translate_text,
